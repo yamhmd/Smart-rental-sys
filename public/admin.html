@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="admin">
+  <main class="dashboard-layout">
+    <aside class="sidebar">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:24px; display:flex;">
+          <span class="brand-mark">📈</span>
+          <span>EstateFlow</span>
+        </a>
+        <nav class="sidebar-menu">
+          <a class="sidebar-link active" href="admin.html">Overview</a>
+          <a class="sidebar-link" href="dashboard.html">Manager dashboard</a>
+          <a class="sidebar-link" href="users.html">Users</a>
+          <a class="sidebar-link" href="properties.html">Properties</a>
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="#" data-logout>Logout</a>
+        </nav>
+      </div>
+      <div class="sidebar-user">
+        <span class="avatar">AD</span>
+        <div>
+          <strong data-user-name>Admin Office</strong>
+        </div>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-topbar">
+        <div>
+          <h1>Admin console</h1>
+          <p>Monitor leases, approvals, portfolio performance, and user growth at system level.</p>
+        </div>
+        <div class="header-actions">
+          <input class="search-inline" placeholder="Search reports or users">
+          <button class="btn btn-primary">Export</button>
+        </div>
+      </div>
+
+      <section class="metrics-grid">
+        <article class="metric-card card-hover"><h3>Total users</h3><strong>—</strong><span class="pos">Registered accounts</span></article>
+        <article class="metric-card card-hover"><h3>Active leases</h3><strong>—</strong><span class="pos">Live contracts</span></article>
+        <article class="metric-card card-hover"><h3>Pending approvals</h3><strong>—</strong><span class="neg">Needs review</span></article>
+        <article class="metric-card card-hover"><h3>Collected revenue</h3><strong>—</strong><span class="pos">All-time paid</span></article>
+      </section>
+
+      <section class="split-grid">
+        <article class="chart-card">
+          <div class="card-head"><strong>New leases</strong><span class="muted">Recent days</span></div>
+          <div style="height: 300px;"><canvas id="adminTrendChart"></canvas></div>
+        </article>
+        <article class="side-card">
+          <div class="card-head"><strong>User distribution</strong><span class="muted">Current mix</span></div>
+          <div style="display:grid; gap:14px;">
+            <div><strong>Loading…</strong><div class="progress"><span style="width: 0%;"></span></div></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="table-card">
+        <div class="card-head"><strong>Recent leases</strong><a class="muted" href="#">View all</a></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Tenant</th>
+                <th>Property</th>
+                <th>Start date</th>
+                <th>Status</th>
+                <th>Rent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="5" style="text-align:center; color:var(--muted);">Loading recent leases…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

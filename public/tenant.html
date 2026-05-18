@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Tenant Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="tenant">
+  <main class="dashboard-layout">
+    <aside class="sidebar">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:24px; display:flex;">
+          <span class="brand-mark">🏢</span>
+          <span>Smart Rental</span>
+        </a>
+        <nav class="sidebar-menu">
+          <a class="sidebar-link active" href="tenant.html">Overview</a>
+          <a class="sidebar-link" href="properties.html">Browse listings</a>
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="#" data-logout>Sign out</a>
+        </nav>
+      </div>
+      <div class="sidebar-user">
+        <span class="avatar">TN</span>
+        <div>
+          <strong data-user-name>Tenant</strong>
+        </div>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-topbar">
+        <div>
+          <h1>Tenant dashboard</h1>
+          <p>Review your leases, payment history, and maintenance activity linked to your tenant profile.</p>
+        </div>
+        <div class="header-actions">
+          <a class="btn btn-primary" href="properties.html">Find a unit</a>
+        </div>
+      </div>
+
+      <section class="data-card" style="margin-bottom: 20px;">
+        <div class="card-head"><strong>At a glance</strong><span class="muted">Live from your account</span></div>
+        <div data-tenant-overview style="padding-top: 8px;">
+          <p class="muted">Loading overview…</p>
+        </div>
+      </section>
+
+      <section class="split-grid">
+        <article class="data-card">
+          <div class="card-head"><strong>Your leases</strong><span class="muted">All statuses</span></div>
+          <div data-tenant-leases style="margin-top: 8px;">
+            <p class="muted">Loading…</p>
+          </div>
+        </article>
+        <article class="data-card">
+          <div class="card-head"><strong>Recent payments</strong><span class="muted">Latest 25</span></div>
+          <div data-tenant-payments style="margin-top: 8px;">
+            <p class="muted">Loading…</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="data-card" style="margin-top: 20px;">
+        <div class="card-head"><strong>Maintenance</strong><span class="muted">Requests tied to your leases</span></div>
+        <div data-tenant-maintenance style="margin-top: 8px;">
+          <p class="muted">Loading…</p>
+        </div>
+      </section>
+
+      <section class="data-card" style="margin-top: 20px;">
+        <div class="card-head"><strong>Property inquiries</strong><span class="muted">Your recent contacts</span></div>
+        <div data-tenant-inquiries style="margin-top: 8px;">
+          <p class="muted">Loading…</p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/tenant-dashboard.js"></script>
+</body>
+</html>

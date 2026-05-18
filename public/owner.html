@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Owner Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="owner">
+  <main class="dashboard-layout">
+    <aside class="sidebar">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:24px; display:flex;">
+          <span class="brand-mark">🏠</span>
+          <span>Smart Rental</span>
+        </a>
+        <nav class="sidebar-menu">
+          <a class="sidebar-link active" href="owner.html">Overview</a>
+          <a class="sidebar-link" href="properties.html">My listings</a>
+          <a class="sidebar-link" href="tenant.html" data-show-roles="tenant">Tenant portal</a>
+          <a class="sidebar-link" href="dashboard.html" data-show-roles="manager,admin">Manager dashboard</a>
+          <a class="sidebar-link" href="admin.html" data-show-roles="admin">Admin panel</a>
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="#" data-logout>Sign out</a>
+        </nav>
+      </div>
+      <div class="sidebar-user">
+        <span class="avatar">OW</span>
+        <div>
+          <strong data-user-name>Owner</strong>
+        </div>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-topbar">
+        <div>
+          <h1>Owner dashboard</h1>
+          <p>Track your listings, review applications, manage leases, and monitor incoming rent from one place.</p>
+        </div>
+        <div class="header-actions">
+          <a class="btn btn-primary" href="properties.html">Add / Review Listings</a>
+        </div>
+      </div>
+
+      <section class="metrics-grid">
+        <article class="metric-card card-hover">
+          <h3>My listings</h3>
+          <strong>—</strong>
+          <span class="pos">Visible and pending units</span>
+        </article>
+        <article class="metric-card card-hover">
+          <h3>Applications</h3>
+          <strong>—</strong>
+          <span class="pos">Pending tenant reviews</span>
+        </article>
+        <article class="metric-card card-hover">
+          <h3>Active leases</h3>
+          <strong>—</strong>
+          <span class="pos">Occupied contracts</span>
+        </article>
+        <article class="metric-card card-hover">
+          <h3>Payments</h3>
+          <strong>—</strong>
+          <span class="pos">Collected rent</span>
+        </article>
+      </section>
+
+      <section class="split-grid">
+        <article class="data-card">
+          <div class="card-head"><strong>My listings</strong><span class="muted">Pending, active, rejected</span></div>
+          <div class="activity-list" style="margin-top: 12px;">
+            <div class="activity-item">
+              <span>Property review workflow will appear here.</span>
+              <span class="muted">Coming next</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="data-card">
+          <div class="card-head"><strong>Applications</strong><span class="muted">Tenant requests</span></div>
+          <div class="activity-list" style="margin-top: 12px;">
+            <div class="activity-item">
+              <span>Approve or reject applications from tenants.</span>
+              <span class="muted">Coming next</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="split-grid" style="margin-top: 20px;">
+        <article class="data-card">
+          <div class="card-head"><strong>Leases</strong><span class="muted">Generated after approval</span></div>
+          <div class="table-wrap" style="margin-top: 12px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Tenant</th>
+                  <th>Start</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" class="muted" style="text-align:center;">Lease records will appear after backend wiring.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="data-card">
+          <div class="card-head"><strong>Payments</strong><span class="muted">Incoming rent</span></div>
+          <div class="table-wrap" style="margin-top: 12px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Due date</th>
+                  <th>Property</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" class="muted" style="text-align:center;">Payment tracking will be connected next.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

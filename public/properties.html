@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="properties">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">🏢</span>
+          <span>Smart Rental</span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="properties.html" data-nav="properties">Properties</a>
+          <a href="tenant.html" data-nav="tenant" data-show-roles="tenant">Tenant portal</a>
+          <a href="dashboard.html" data-nav="dashboard" data-show-roles="manager,admin">Manager dashboard</a>
+          <a href="admin.html" data-nav="admin" data-show-roles="admin">Admin</a>
+          <a href="users.html" data-show-roles="admin">Users</a>
+          <a href="auth.html" data-nav="auth" data-show-guest>Login</a>
+          <a href="#" data-logout data-show-authed>Logout</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary" href="auth.html" data-show-guest>Apply now</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-title">
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px;">Available Properties</h1>
+        <p class="muted">Search by place, filter by type, set a bed count, and narrow the price ceiling. Results are pulled live from the MySQL database.</p>
+      </section>
+
+      <form class="filters-bar" data-property-filters>
+        <input class="input" name="query" placeholder="Search by city, address, or property name">
+        <select class="select" name="type">
+          <option value="">All types</option>
+          <option>Studio</option>
+          <option>1BR</option>
+          <option>2BR</option>
+          <option>3BR</option>
+          <option>Villa</option>
+        </select>
+        <select class="select" name="beds">
+          <option value="">Any beds</option>
+          <option value="1">1+ beds</option>
+          <option value="2">2+ beds</option>
+          <option value="3">3+ beds</option>
+          <option value="4">4+ beds</option>
+        </select>
+        <select class="select" name="price">
+          <option value="">Any price</option>
+          <option value="5000">Up to EGP 5,000</option>
+          <option value="10000">Up to EGP 10,000</option>
+          <option value="15000">Up to EGP 15,000</option>
+          <option value="25000">Up to EGP 25,000</option>
+        </select>
+        <a class="btn btn-light" href="properties.html" style="display:grid; place-items:center;">Reset</a>
+      </form>
+
+      <section class="property-grid" data-properties-grid></section>
+      <div class="pagination">
+        <button class="btn btn-light" type="button">1</button>
+        <button class="btn btn-light" type="button">2</button>
+        <button class="btn btn-light" type="button">3</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Smart Rental</span>
+        <span>Listings page</span>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

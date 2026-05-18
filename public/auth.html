@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="auth">
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">🏢</span>
+        <span>Smart Rental</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="properties.html" data-nav="properties">Properties</a>
+        <a href="tenant.html" data-nav="tenant" data-show-roles="tenant">Tenant portal</a>
+        <a href="dashboard.html" data-nav="dashboard" data-show-roles="manager,admin">Manager dashboard</a>
+        <a href="admin.html" data-nav="admin" data-show-roles="admin">Admin</a>
+        <a href="users.html" data-show-roles="admin">Users</a>
+        <a href="auth.html" data-nav="auth" data-show-guest>Login</a>
+        <a href="#" data-logout data-show-authed>Logout</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-light" href="properties.html">Browse</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-visual">
+      <div class="auth-visual-copy">
+        <div class="eyebrow" style="background: rgba(255,255,255,0.12); color: white;">Rental workspace</div>
+        <h1 style="font-size: clamp(2.1rem, 4vw, 3.5rem); margin: 18px 0 16px;">Manage rentals through one connected system.</h1>
+        <p style="color: #cbd5e1; margin-top: 16px; font-size: 0.9rem;">
+          <strong>Demo logins:</strong><br>
+          admin@rental.com / admin123<br>
+          manager@rental.com / manager123<br>
+          tenant@rental.com / tenant123
+        </p>
+      </div>
+    </section>
+
+    <section class="auth-form-wrap">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-mode="login">Login</button>
+          <button class="auth-tab" data-mode="register">Register</button>
+        </div>
+        <h2 data-auth-title>Welcome back</h2>
+        <p class="helper" data-auth-subtitle>Sign in to access your rental workspace.</p>
+
+        <form class="form-grid" data-auth-form>
+          <div id="nameField" data-auth-name style="display:none;">
+            <label class="label" for="fullName">Full name</label>
+            <input class="input" id="fullName" name="full_name" autocomplete="name" placeholder="Amina Rahman">
+          </div>
+          <div data-auth-role style="display:none;">
+            <label class="label" for="role">Register as</label>
+            <select class="select" id="role" name="role">
+              <option value="tenant">Tenant</option>
+              <option value="owner">Owner</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+          </div>
+          <div>
+            <label class="label" for="password">Password</label>
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+          </div>
+          <button class="btn btn-primary btn-block" data-auth-submit type="submit">Sign In</button>
+        </form>
+        <div class="status-msg" data-auth-status></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Property Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="property-detail">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">🏢</span>
+          <span>Smart Rental</span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="properties.html" data-nav="properties">Properties</a>
+          <a href="tenant.html" data-nav="tenant" data-show-roles="tenant">Tenant portal</a>
+          <a href="dashboard.html" data-nav="dashboard" data-show-roles="manager,admin">Manager dashboard</a>
+          <a href="admin.html" data-nav="admin" data-show-roles="admin">Admin</a>
+          <a href="users.html" data-show-roles="admin">Users</a>
+          <a href="auth.html" data-nav="auth" data-show-guest>Login</a>
+          <a href="#" data-logout data-show-authed>Logout</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-light" href="properties.html">Back to listings</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-title">
+        <div class="eyebrow">Property details</div>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin: 14px 0 10px;" data-property-title>Loading property…</h1>
+        <p class="muted" data-property-subtitle>Fetching property information and reviews.</p>
+      </section>
+
+      <section class="data-card" style="margin-bottom: 20px;">
+        <div class="card-head">
+          <strong>Property pictures</strong>
+          <span class="muted">Photo gallery</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 12px;">
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+          <div style="aspect-ratio: 1; border-radius: 8px; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+        </div>
+      </section>
+
+      <section class="split-grid">
+        <article class="data-card">
+          <div class="card-head">
+            <strong>Property overview</strong>
+            <span class="muted" data-property-status>Loading…</span>
+          </div>
+          <div data-property-overview class="muted">Loading property details…</div>
+        </article>
+
+        <article class="data-card">
+          <div class="card-head">
+            <strong>Review summary</strong>
+            <span class="muted" data-property-review-count>0 reviews</span>
+          </div>
+          <div data-property-rating class="muted">Loading rating…</div>
+          <div style="margin-top: 18px;">
+            <button class="btn btn-primary btn-block" data-open-detail-inquiry>Send inquiry</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="data-card" style="margin-top: 20px;">
+        <div class="card-head">
+          <strong>Reviews</strong>
+          <span class="muted">What tenants say</span>
+        </div>
+        <div data-property-reviews class="muted">Loading reviews…</div>
+      </section>
+    </main>
+
+    <div class="modal-overlay" data-property-detail-modal hidden>
+      <div class="modal-card">
+        <h3>Send inquiry</h3>
+        <p class="muted" data-property-detail-modal-meta>Select a property to continue.</p>
+        <form data-property-detail-inquiry-form>
+          <div class="form-grid">
+            <div>
+              <label class="label" for="detailInquiryFullName">Full name</label>
+              <input class="input" id="detailInquiryFullName" name="full_name" type="text" required>
+            </div>
+            <div>
+              <label class="label" for="detailInquiryEmail">Email</label>
+              <input class="input" id="detailInquiryEmail" name="email" type="email" required>
+            </div>
+            <div>
+              <label class="label" for="detailInquiryPhone">Phone number</label>
+              <input class="input" id="detailInquiryPhone" name="phone" type="tel" required>
+            </div>
+            <div>
+              <label class="label" for="detailInquiryAddress">Address</label>
+              <input class="input" id="detailInquiryAddress" name="address" type="text" required>
+            </div>
+          </div>
+          <div class="status-msg" data-property-detail-inquiry-status></div>
+          <div class="modal-actions">
+            <button class="btn btn-light" type="button" data-close-detail-modal>Cancel</button>
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Smart Rental</span>
+        <span>Property details</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">🏢</span>
+          <span>Smart Rental</span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="properties.html" data-nav="properties">Properties</a>
+          <a href="tenant.html" data-nav="tenant" data-show-roles="tenant">Tenant portal</a>
+          <a href="owner.html" data-nav="owner" data-show-roles="landlord">Owner portal</a>
+          <a href="dashboard.html" data-nav="dashboard" data-show-roles="manager,admin">Manager dashboard</a>
+          <a href="admin.html" data-nav="admin" data-show-roles="admin">Admin</a>
+          <a href="users.html" data-show-roles="admin">Users</a>
+          <a href="auth.html" data-nav="auth" data-show-guest>Login</a>
+          <a href="#" data-logout data-show-authed>Logout</a>
+        </nav>
+        <div class="header-actions">
+          <input class="search-inline" placeholder="Search listings">
+          <a class="btn btn-primary" href="auth.html" data-show-guest>Register</a>
+          <a class="btn btn-primary" href="tenant.html" data-show-roles="tenant" style="display:none;">My portal</a>
+          <a class="btn btn-primary" href="owner.html" data-show-roles="landlord" style="display:none;">Owner portal</a>
+          <a class="btn btn-primary" href="dashboard.html" data-show-roles="manager" style="display:none;">Dashboard</a>
+          <a class="btn btn-primary" href="admin.html" data-show-roles="admin" style="display:none;">Console</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">New automated financial reports</span>
+            <h1>Run your <span>rental business</span> through one clean workspace.</h1>
+            <p>
+              This application merges your landing page, authentication flow, property browsing, manager dashboard, and admin console into a connected front-end project with shared styling and shared JavaScript behavior.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="properties.html">Browse Properties</a>
+              <a class="btn btn-light" href="auth.html" data-show-guest>Sign in</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="mock-window">
+              <div class="window-row"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="mini-grid">
+                <div class="stat-card"><small>Monthly revenue</small><div class="stat-value">—</div></div>
+                <div class="stat-card"><small>Occupancy</small><div class="stat-value">—</div></div>
+                <div class="stat-card"><small>Open tickets</small><div class="stat-value">—</div></div>
+                <div class="stat-card"><small>Active leases</small><div class="stat-value">—</div></div>
+              </div>
+            </div>
+            <div class="panel" style="padding:18px;">
+              <div class="card-head"><strong>Recent activity</strong><span class="muted">Live from database</span></div>
+              <div class="activity-list">
+                <div class="activity-item"><span>Loading recent activity…</span><span class="muted"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Core capabilities</h2>
+            <p>Each page you uploaded is folded into a single product structure, with a consistent theme and reusable components across screens.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card card-hover">
+              <div class="feature-icon">🏘️</div>
+              <h3>Property listing management</h3>
+              <p>Publish listings, organize inventory, and keep availability visible without moving between disconnected screens.</p>
+            </article>
+            <article class="feature-card card-hover">
+              <div class="feature-icon">📄</div>
+              <h3>Lease and payment tracking</h3>
+              <p>Keep contracts, due dates, payment signals, and occupancy indicators inside one shared system.</p>
+            </article>
+            <article class="feature-card card-hover">
+              <div class="feature-icon">📊</div>
+              <h3>Role-based dashboards</h3>
+              <p>Managers can view operations and activity while administrators see portfolio-wide trends and recent leases.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>How the application works</h2>
+            <p>The structure is now organized as a web application instead of isolated mockups.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card card-hover">
+              <div class="step-number">1</div>
+              <h3>Authenticate</h3>
+              <p>Users log in or register through one shared entry page with JavaScript-driven tab switching.</p>
+            </article>
+            <article class="step-card card-hover">
+              <div class="step-number">2</div>
+              <h3>Browse and filter</h3>
+              <p>Available listings are rendered from the MySQL database and filtered live in the interface.</p>
+            </article>
+            <article class="step-card card-hover">
+              <div class="step-number">3</div>
+              <h3>Manage operations</h3>
+              <p>Dashboards surface metrics, trends, lease status, occupancy, and activity in a consistent admin shell.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Smart Rental</h4>
+          <p>Unified rental management for listings, leases, operations, and reporting.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="auth.html">Login</a>
+        </div>
+        <div>
+          <h4>Dashboards</h4>
+          <a href="tenant.html">Tenant portal</a>
+          <a href="owner.html">Owner portal</a>
+          <a href="dashboard.html">Manager dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="users.html">User management</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>support@smartrental.demo</p>
+          <p>+20 100 0000000</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Smart Rental</span>
+        <span>Front-end + Node.js backend</span>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

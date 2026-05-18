@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Rental | Manager Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="dashboard">
+  <main class="dashboard-layout">
+    <aside class="sidebar">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:24px; display:flex;">
+          <span class="brand-mark">🏢</span>
+          <span>RentalPro</span>
+        </a>
+        <nav class="sidebar-menu">
+          <a class="sidebar-link active" href="dashboard.html">Overview</a>
+          <a class="sidebar-link" href="properties.html">Properties</a>
+          <a class="sidebar-link" href="admin.html" data-show-roles="admin">Admin panel</a>
+          <a class="sidebar-link" href="users.html" data-show-roles="admin">Users</a>
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="#" data-logout>Logout</a>
+        </nav>
+      </div>
+      <div class="sidebar-user">
+        <span class="avatar">AR</span>
+        <div>
+          <strong data-user-name>Amina Rahman</strong>
+        </div>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <div class="dashboard-topbar">
+        <div>
+          <h1>Manager dashboard</h1>
+          <p>Track revenue, occupancy, team activity, and urgent operational issues.</p>
+        </div>
+        <div class="header-actions">
+          <input class="search-inline" placeholder="Search units or tenants">
+          <a class="btn btn-primary" href="properties.html">View Listings</a>
+        </div>
+      </div>
+
+      <section class="metrics-grid">
+        <article class="metric-card card-hover"><h3>Total properties</h3><strong>—</strong><span class="pos">Live from DB</span></article>
+        <article class="metric-card card-hover"><h3>Occupancy rate</h3><strong>—</strong><span class="pos">Across all units</span></article>
+        <article class="metric-card card-hover"><h3>Monthly revenue</h3><strong>—</strong><span class="pos">From active leases</span></article>
+        <article class="metric-card card-hover"><h3>Open maintenance</h3><strong>—</strong><span class="neg">Tickets to handle</span></article>
+      </section>
+
+      <section class="split-grid">
+        <article class="chart-card">
+          <div class="card-head"><strong>Revenue trend</strong><span class="muted">Last 6 months</span></div>
+          <div style="height: 300px;"><canvas id="revenueChart"></canvas></div>
+        </article>
+        <article class="side-card">
+          <div class="card-head"><strong>Occupancy mix</strong><span class="muted">Portfolio</span></div>
+          <div style="height: 300px;"><canvas id="occupancyChart"></canvas></div>
+        </article>
+      </section>
+
+      <section class="split-grid">
+        <article class="data-card">
+          <div class="card-head"><strong>Recent activity</strong><a class="muted" href="#">View all</a></div>
+          <div class="activity-list">
+            <div class="activity-item"><span>Loading activity…</span><span class="muted"></span></div>
+          </div>
+        </article>
+        <article class="alert-card">
+          <div class="card-head"><strong>Urgent items</strong><span class="badge danger">Pending</span></div>
+          <p>Open maintenance tickets and pending applications require team attention.</p>
+          <div class="progress"><span style="width: 68%;"></span></div>
+          <p class="muted" style="margin-top: 10px;">68% of this week's tasks have been completed.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
